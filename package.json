@@ -21,7 +21,7 @@
     "@babel/runtime": "^7.12.5",
     "@emotion/core": "^10.1.1",
     "@emotion/styled": "^10.0.27",
-    "@material-ui/core": "^5.0.0-alpha.14",
+    "@material-ui/core": "^5.0.0-alpha.15",
     "@material-ui/icons": "^5.0.0-alpha.15",
     "clsx": "^1.1.1",
     "react": "^17.0.1",
