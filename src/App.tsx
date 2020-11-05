@@ -8,26 +8,21 @@ import StylesProvider from '@material-ui/styles/StylesProvider';
 import theme from 'theme';
 import Home from 'pages/Home';
 import { Layout } from 'components/Layout';
+import ENV, { ApiDoc } from 'env';
 
 const generateClassName = createGenerateClassName({
   disableGlobal: true,
   productionPrefix: 's',
 });
 
-interface DocModel {
-  name: string;
-  version: string;
-  url: string;
-}
-
 const App = () => {
-  const [docs, setDocs] = useState<Array<DocModel>>([]);
+  const [docs, setDocs] = useState<Array<ApiDoc>>([]);
   const [docNames, setDocsName] = useState<Array<string>>([]);
   const [docVersions, setDocVerions] = useState<Array<string>>([]);
   const [activeDocUrl, setActiveDocUrl] = useState('');
 
   useEffect(() => {
-    const _docs = ((window as any).ENVIRONMENT.DOCS as Array<DocModel>) || [];
+    const _docs = ENV.DOCS;
     const _docNames = _docs.map((doc) => doc.name);
     const uniqueueDocNames = [...new Set(_docNames)].sort();
     const _activeDoc = uniqueueDocNames[0];
