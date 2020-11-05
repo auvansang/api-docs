@@ -1,0 +1,7 @@
+window.ENVIRONMENT = {
+  CLIENT_ID: '${CLIENT_ID}',
+  CLIENT_SECRET: '${CLIENT_SECRET}',
+  REALM: '${CLIENT_SECRET}',
+  SCOPES: '${SCOPES}',
+  DOCS: ${DOCS},
+};
