@@ -333,36 +333,36 @@ module.exports = (_env: { [key: string]: any }, argv: { [key: string]: any }) =>
     target: 'web',
   };
 
-  // if (isDevelopment) {
-  //   config.devtool = 'cheap-module-source-map';
+  if (isDevelopment) {
+    config.devtool = 'cheap-module-source-map';
 
-  //   config.output!.devtoolModuleFilenameTemplate = (info: any) =>
-  //     path.resolve(info.absoluteResourcePath).replace(/\\/g, '/');
+    config.output!.devtoolModuleFilenameTemplate = (info: any) =>
+      path.resolve(info.absoluteResourcePath).replace(/\\/g, '/');
 
-  //   config.devServer = {
-  //     compress: true,
-  //     contentBase: paths.public,
-  //     // contentBasePublicPath: paths.publicPath,
-  //     disableHostCheck: true,
-  //     historyApiFallback: true,
-  //     host: paths.host,
-  //     hot: true,
-  //     https: paths.https,
-  //     inline: true,
-  //     open: true,
-  //     overlay: true,
-  //     port: paths.port,
-  //     public: `http://localhost:${paths.port}`,
-  //     publicPath: paths.publicPath,
-  //     stats: {
-  //       colors: true,
-  //       errors: true,
-  //       modules: false,
-  //     },
-  //     useLocalIp: true,
-  //     // watchContentBase: true,
-  //   };
-  // }
+    config.devServer = {
+      compress: true,
+      contentBase: paths.public,
+      // contentBasePublicPath: paths.publicPath,
+      disableHostCheck: true,
+      historyApiFallback: true,
+      host: paths.host,
+      hot: true,
+      https: paths.https,
+      inline: true,
+      open: true,
+      overlay: true,
+      port: paths.port,
+      public: `http://localhost:${paths.port}`,
+      publicPath: paths.publicPath,
+      stats: {
+        colors: true,
+        errors: true,
+        modules: false,
+      },
+      useLocalIp: true,
+      // watchContentBase: true,
+    };
+  }
 
   return config;
 };
