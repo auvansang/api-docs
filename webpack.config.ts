@@ -1,6 +1,6 @@
 import { Configuration, DefinePlugin, HotModuleReplacementPlugin, ProgressPlugin } from 'webpack';
 import fs from 'fs';
-import glob from 'glob';
+// import glob from 'glob';
 import path from 'path';
 
 // Share Plugins
@@ -8,7 +8,7 @@ import dotenv from 'dotenv';
 import dotenvExpand from 'dotenv-expand';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import PurgecssPlugin from 'purgecss-webpack-plugin';
+// import PurgecssPlugin from 'purgecss-webpack-plugin';
 
 // Dev plugins
 import CaseSensitivePathsPlugin from 'case-sensitive-paths-webpack-plugin';
@@ -189,7 +189,6 @@ module.exports = (_env: { [key: string]: any }, argv: { [key: string]: any }) =>
       mergeDuplicateChunks: true,
       minimize: isProduction,
       minimizer: [
-        // This is only used in production mode
         new TerserPlugin({
           parallel: true,
           terserOptions: {
@@ -264,9 +263,9 @@ module.exports = (_env: { [key: string]: any }, argv: { [key: string]: any }) =>
         chunkFilename: `static/css/[name].[${isDevelopment ? 'hash' : 'contenthash:8'}].chunk.css`,
         filename: `static/css/[name].[${isDevelopment ? 'hash' : 'contenthash:8'}].css`,
       }),
-      new PurgecssPlugin({
-        paths: glob.sync(`${paths.src}/**/*`, { nodir: true }),
-      }),
+      // new PurgecssPlugin({
+      //   paths: glob.sync(`${paths.src}/**/*`, { nodir: true }),
+      // }),
       isDevelopment && new HotModuleReplacementPlugin(),
       isDevelopment && new CaseSensitivePathsPlugin(),
       isDevelopment &&
