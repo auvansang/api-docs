@@ -34,11 +34,12 @@ const Dashboard = (props: Props) => {
         clientId: ENV.CLIENT_ID,
         scopeSeparator: ' ',
         scopes: ENV.SCOPES,
-        usePkceWithAuthorizationCodeGrant: ENV.USE_PKCE,
       } as OAuthConfig;
 
       if (ENV.REALM) oAuthConfig = { ...oAuthConfig, realm: ENV.REALM };
       if (ENV.CLIENT_SECRET) oAuthConfig = { ...oAuthConfig, clientSecret: ENV.CLIENT_SECRET };
+      if (ENV.USE_PKCE)
+        oAuthConfig = { ...oAuthConfig, usePkceWithAuthorizationCodeGrant: ENV.USE_PKCE };
 
       docUI.initOAuth(oAuthConfig);
     }
