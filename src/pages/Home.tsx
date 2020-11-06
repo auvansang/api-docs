@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 // @ts-ignore
 import SwaggerUI from 'swagger-ui';
 
-import ENV, { ApiDoc } from 'env';
+import ENV from 'env';
 
 interface Props {
   url: string;
