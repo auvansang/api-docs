@@ -26,7 +26,7 @@
     "clsx": "^1.1.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "swagger-ui": "^3.36.1"
+    "swagger-ui": "^3.36.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
@@ -51,7 +51,7 @@
     "@types/node": "^14.14.6",
     "@types/optimize-css-assets-webpack-plugin": "^5.0.1",
     "@types/postcss-safe-parser": "^4.0.0",
-    "@types/react": "^16.9.55",
+    "@types/react": "^16.9.56",
     "@types/react-dom": "^16.9.9",
     "@types/terser-webpack-plugin": "^4.2.0",
     "@types/webpack": "^4.41.24",
@@ -74,7 +74,7 @@
     "css-loader": "^3.6.0",
     "dotenv": "^8.2.0",
     "dotenv-expand": "^5.1.0",
-    "eslint": "^7.12.1",
+    "eslint": "^7.13.0",
     "eslint-config-prettier": "^6.15.0",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
