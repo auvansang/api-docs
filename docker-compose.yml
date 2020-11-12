@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  api-docs:
+    image: ${REGISTRY:-sisa.cafe}/api-docs:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 12000:80
+    # environment:
+      # REALM: ''
+      # CLIENT_ID: 'api-docs'
+      # CLIENT_SECRET: ''
+      # SCOPES: 'openid profile offline_access identity-api object-storage-api notification-api cron-job-api sales-management-api chat-api customer-api loan-application-api statistical-api'
+      # USE_PKCE: 'true'
+      # DOCS: "[{ url: 'http://113.161.58.33:10200/sales-management-api/swagger/v1/swagger.json', name: 'Sales Management', version: 1 },
+      #         { url: 'http://113.161.58.33:10200/sales-management-api/swagger/v2/swagger.json', name: 'Sales Management', version: 2 }]"

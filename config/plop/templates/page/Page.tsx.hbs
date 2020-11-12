@@ -1,0 +1,21 @@
+
+import { useTranslation } from 'react-i18next';
+
+import Meta from 'core/components/common/Meta';
+
+const {{pascalCase name}} = () => {
+{{#if path}}
+  const [t] = useTranslation('page__{{snakeCase path}}__{{snakeCase name}}');
+{{else}}
+  const [t] = useTranslation('page__{{snakeCase name}}');
+{{/if}}
+
+  return (
+    <>
+      <Meta title={t('pageTitle')} description={t('pageDescription')} />
+      {{titleCase name}}
+    </>
+  );
+};
+
+export default {{pascalCase name}};
